@@ -39,5 +39,6 @@
     "typescript": "^4.3.5",
     "util": "^0.12.4"
   },
-  "author": "Nuke <86313547+NukeZzZin@users.noreply.github.com>"
+  "author": "Nuke <86313547+NukeZzZin@users.noreply.github.com>",
+  "version": "0.0.1"
 }
