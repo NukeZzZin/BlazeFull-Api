@@ -1,0 +1,10 @@
+# Environment files
+.env
+# Dependency directories
+node_modules
+# Visual Studio Code configs files
+.vscode
+# logs files
+*.log
+# Build directories
+build
