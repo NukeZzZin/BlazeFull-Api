@@ -10,6 +10,7 @@ export interface UserInterface {
     createdAt: string | Date;
     password: string;
     phone: string | null;
+    actived: boolean
 }
 
 export interface UserDocument extends UserInterface, Document {
@@ -26,6 +27,7 @@ export const UserSchema: Schema = new Schema({
     createdAt: { type: String, required: true, default: new Date().toUTCString() },
     password: { type: String, required: true },
     phone: { type: String, required: false, default: null },
+    actived: { type: Boolean, required: false, default: false }
     // birth: { type: Date, required: true }
 });
 

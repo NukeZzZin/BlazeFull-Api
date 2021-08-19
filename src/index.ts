@@ -9,6 +9,7 @@ import path from "path";
 import fs from "fs";
 
 const app = express();
+const router: express.Router = express.Router()
 
 dotenv.config();
 app.use(cookieParser());
