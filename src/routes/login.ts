@@ -3,7 +3,6 @@ import UserModel from "../models/user";
 import functions from "../utils/scripts";
 import bcrypt from "bcrypt";
 
-
 const router: express.Router = express.Router();
 
 router.post("/api/v2/auth/login", async (request, response) => {
@@ -15,4 +14,4 @@ router.post("/api/v2/auth/login", async (request, response) => {
     return response.json({ code: 0, message: await functions.GenerateToken(callback?.id), success: true }).status(200);
 });
 
-module.exports = router
+module.exports = router;
