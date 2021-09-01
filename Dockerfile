@@ -1,9 +1,11 @@
-FROM node:14
-WORKDIR /usr/src/backend/node
-COPY package.json .
-COPY yarn.lock .
-RUN yarn
-COPY . .
+FROM node:16.6.2
+
+RUN mkdir /usr/src/discord/
+WORKDIR /usr/src/discord/
+COPY package.json /usr/src/discord/
+RUN npm install
+RUN npm run tsc
 EXPOSE 8000
-RUN yarn start
-CMD ["node", "server.js"]
+COPY . /usr/src/discord/
+
+CMD ["node", "index.js"]
